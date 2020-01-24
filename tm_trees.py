@@ -1,15 +1,4 @@
-"""Assignment 2: Trees for Treemap
-
-=== CSC148 Winter 2019 ===
-This code is provided solely for the personal and private use of
-students taking the CSC148 course at the University of Toronto.
-Copying for purposes other than this use is expressly prohibited.
-All forms of distribution of this code, whether as given or with
-any changes, are expressly prohibited.
-
-All of the files in this directory and all sub-directories are:
-Copyright (c) 2019 Bogdan Simion, David Liu, Diane Horton, Jacqueline Smith
-
+"""
 === Module Description ===
 This module contains the basic tree interface required by the treemap
 visualiser. You will both add to the abstract class, and complete a
@@ -26,15 +15,6 @@ from typing import List, Tuple, Optional
 class TMTree:
     """A TreeMappableTree: a tree that is compatible with the treemap
     visualiser.
-
-    This is an abstract class that should not be instantiated directly.
-
-    You may NOT add any attributes, public or private, to this class.
-    However, part of this asignment will involve you implementing new public
-    *methods* for this interface.
-    You should not add any new public methods other than those required by
-    the client code.
-    You can, however, freely add private methods as needed.
 
     === Public Attributes ===
     rect:

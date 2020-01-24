@@ -1,15 +1,4 @@
-"""Assignment 2: Treemap Visualiser
-
-=== CSC148 Winter 2019 ===
-This code is provided solely for the personal and private use of
-students taking the CSC148 course at the University of Toronto.
-Copying for purposes other than this use is expressly prohibited.
-All forms of distribution of this code, whether as given or with
-any changes, are expressly prohibited.
-
-All of the files in this directory and all subdirectories are:
-Copyright (c) 2019 Bogdan Simion, David Liu, Diane Horton, Jacqueline Smith
-
+"""
 === Module Description ===
 This module contains the main program code for the treemap visualisation.
 It is responsible for initializing an instance of TMTree (using a
@@ -20,15 +9,13 @@ to them.
 from typing import Optional, Tuple
 import pygame
 from tm_trees import TMTree, FileSystemTree
-from papers import PaperTree
-
 
 # Screen dimensions and coordinates
 ORIGIN = (0, 0)
 # You may adjust these values as you'd like, depending on your screen resolution
 WIDTH = 1080  # 1024, 800
-HEIGHT = 720 # 768, 600
-FONT_HEIGHT = 30                       # The height of the text display.
+HEIGHT = 720  # 768, 600
+FONT_HEIGHT = 30  # The height of the text display.
 TREEMAP_HEIGHT = HEIGHT - FONT_HEIGHT  # The height of the treemap display.
 
 # Font to use for the treemap program.
@@ -187,18 +174,9 @@ def run_treemap_file_system(path: str) -> None:
     run_visualisation(file_tree)
 
 
-def run_treemap_papers() -> None:
-    """Run a treemap visualization for CS Education research papers data.
-
-    You can try changing the value of the named argument by_year, but the
-    others should stay the same.
-    """
-    paper_tree = PaperTree('CS1', [], all_papers=True, by_year=True)
-    run_visualisation(paper_tree)
-
-
 if __name__ == '__main__':
     import python_ta
+
     python_ta.check_all(config={
         'allowed-import-modules': [
             'python_ta', 'typing', 'pygame', 'tm_trees', 'papers'
@@ -206,14 +184,4 @@ if __name__ == '__main__':
         'generated-members': 'pygame.*'
     })
 
-    # To check your work for Tasks 1-5, try uncommenting the following function
-    # call, with the '' replaced by a path like
-    # 'C:\\Users\\Bogdan\\Documents\\csc148\\assignments' (Windows) or
-    # '/Users/Bogdan/Documents/courses/csc148/assignments' (OSX)
-    # 'C:\\Users\\Shayan\\Desktop\\csc148\\labs\\lab6'
-    # 'C:\\Users\\Shayan\\Desktop\\csc148'\\assignments\\a2\\example-directory'
-    run_treemap_file_system('C:\\Users\\Shayan\\Desktop\\csc148'
-                            '\\assignments\\a2\\example-directory')
-
-    # To check your work for Task 6, try uncommenting the following
-    #run_treemap_papers()
+    run_treemap_file_system('C:\\Users\\Shayan\\Desktop')
